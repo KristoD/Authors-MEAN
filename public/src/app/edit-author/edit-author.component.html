@@ -1,0 +1,14 @@
+<a [routerLink]="['']">Home</a>
+<p>Edit this author</p>
+
+<p *ngIf="validation === false">
+  Author name must be 3 or more characters long!
+</p>
+
+<fieldset>
+  <form (submit)="onSubmit()">
+    <input type="text" name="author['name']" [(ngModel)]="author['name']">
+    <button [routerLink]="['']">Cancel</button>
+    <input type="submit" value="Submit">
+  </form>
+</fieldset>

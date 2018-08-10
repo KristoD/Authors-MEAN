@@ -1,0 +1,13 @@
+<a [routerLink]="['']">Home</a>
+<p>Provide a quote by {{author.name}}</p>
+
+<p *ngIf="validation === false">
+  Author name must be 3 or more characters long!
+</p>
+<fieldset>
+  <form (submit)="onSubmit()">
+    <input type="text" name="quote.content" [(ngModel)]="quote.content">
+    <button [routerLink]="['']">Cancel</button>
+    <input type="submit" value="Submit">
+  </form>
+</fieldset>
